@@ -21,6 +21,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQ8-kw-57c">
                                     <rect key="frame" x="169" y="8" width="76" height="30"/>
                                     <state key="normal" title="Randomize"/>
+                                    <connections>
+                                        <action selector="randomizeButtonTapped:" destination="AHG-WE-HNR" eventType="touchUpInside" id="HsY-mc-KYm"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -44,10 +47,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Random Pairs" id="ITl-vb-2kq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="l4C-QN-5jk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="l4C-QN-5jk">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="AHG-WE-HNR" id="xqu-oG-bGA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUc-Fz-Rlw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="AHG-WE-HNR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1213.0434782608697" y="-294.64285714285711"/>
         </scene>
