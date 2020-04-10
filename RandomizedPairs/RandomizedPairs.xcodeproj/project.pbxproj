@@ -15,6 +15,7 @@
 		347D6A542440DF38004491FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347D6A522440DF38004491FF /* LaunchScreen.storyboard */; };
 		347D6A612440E035004491FF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D6A602440E035004491FF /* Person.swift */; };
 		347D6A632440E0C0004491FF /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D6A622440E0C0004491FF /* Pair.swift */; };
+		347D6A652440E176004491FF /* PairsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D6A642440E176004491FF /* PairsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		347D6A552440DF38004491FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		347D6A602440E035004491FF /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		347D6A622440E0C0004491FF /* Pair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
+		347D6A642440E176004491FF /* PairsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		347D6A5F2440DF6A004491FF /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				347D6A642440E176004491FF /* PairsController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				347D6A4F2440DF36004491FF /* RandomizedPairs.xcdatamodeld in Sources */,
 				347D6A452440DF36004491FF /* AppDelegate.swift in Sources */,
 				347D6A612440E035004491FF /* Person.swift in Sources */,
+				347D6A652440E176004491FF /* PairsController.swift in Sources */,
 				347D6A472440DF36004491FF /* SceneDelegate.swift in Sources */,
 				347D6A632440E0C0004491FF /* Pair.swift in Sources */,
 			);
