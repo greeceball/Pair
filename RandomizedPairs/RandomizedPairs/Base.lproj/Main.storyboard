@@ -42,7 +42,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="i2I-yY-4zc" kind="show" id="ZlI-io-7dG"/>
+                                    <segue destination="i2I-yY-4zc" kind="show" identifier="toDetailVC" id="ZlI-io-7dG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -63,24 +63,19 @@
             </objects>
             <point key="canvasLocation" x="1213.0434782608697" y="-294.64285714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Person Detail View Controller-->
         <scene sceneID="2qb-cN-rIp">
             <objects>
-                <viewController id="i2I-yY-4zc" sceneMemberID="viewController">
+                <viewController id="i2I-yY-4zc" customClass="PersonDetailViewController" customModule="RandomizedPairs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hxk-zQ-VMP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7w7-t1-U9c">
-                                <rect key="frame" x="0.0" y="128" width="414" height="76"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="7w7-t1-U9c">
+                                <rect key="frame" x="0.0" y="128" width="414" height="34"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Partners Name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nEb-vM-y1q">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Qj-56-15g">
-                                        <rect key="frame" x="0.0" y="42" width="414" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -90,13 +85,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="7w7-t1-U9c" firstAttribute="leading" secondItem="jB5-Ye-C9o" secondAttribute="leading" id="GqO-5P-2mj"/>
+                            <constraint firstItem="7w7-t1-U9c" firstAttribute="top" secondItem="jB5-Ye-C9o" secondAttribute="top" constant="40" id="QLE-XO-X93"/>
                             <constraint firstItem="jB5-Ye-C9o" firstAttribute="trailing" secondItem="7w7-t1-U9c" secondAttribute="trailing" id="kBL-b4-XdR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jB5-Ye-C9o"/>
                     </view>
                     <navigationItem key="navigationItem" id="gBP-3q-Syx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="0JS-p8-gxY"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="0JS-p8-gxY">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="i2I-yY-4zc" id="hSR-ng-ia9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="9Qj-56-15g" id="myR-sT-DKa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4j-Ux-h8J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

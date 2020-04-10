@@ -12,7 +12,6 @@ import CoreData
 class CoreDataStack {
     
     // MARK: - Core Data Stack
-    
     static var container: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "RandomizedPairs")
         container.loadPersistentStores { (storeDescription, error) in
@@ -28,7 +27,6 @@ class CoreDataStack {
     }
     
     // MARK: - Core Data Saving Support
-
     static func saveContext () {
         let context = CoreDataStack.context
         if context.hasChanges {

@@ -14,11 +14,9 @@ class PersonDetailViewController: UIViewController {
     var person: Person?
     
     // MARK: - Outlets
-    
     @IBOutlet weak var nameTextField: UITextField!
     
     // MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +31,6 @@ class PersonDetailViewController: UIViewController {
     }
     
     // MARK: - Actions
-    
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let newName = nameTextField.text, !newName.isEmpty,
             let person = person
@@ -42,5 +39,4 @@ class PersonDetailViewController: UIViewController {
         PersonController.shared.update(person: person, withName: newName)
         navigationController?.popViewController(animated: true)
     }
-
 }

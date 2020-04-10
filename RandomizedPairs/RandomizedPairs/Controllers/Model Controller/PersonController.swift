@@ -10,8 +10,8 @@ import Foundation
 import CoreData
 
 class PersonController {
-    // MARK: - Properties
     
+    // MARK: - Properties
     static let shared = PersonController()
     
     var peopleArray: [Person] {
@@ -20,7 +20,6 @@ class PersonController {
     }
     
     // MARK: - CRUD
-    
     func addPerson(withName name: String) {
         _ = Person(name: name)
         saveToPersistentStore()
@@ -37,31 +36,6 @@ class PersonController {
     }
     
     // MARK: - Helper Methods
-    
-    //    func makePairs() -> [[Person]] {
-    //        let shuffledPersons = peopleArray.shuffled()
-    //
-    //        var pairs = [[Person]]()
-    //        var pair = [Person]()
-    //
-    //        for person in shuffledPersons {
-    //            if pair.count == 0 {
-    //                pair.append(person)
-    //            } else {
-    //                pair.append(person)
-    //                pairs.append(pair)
-    //                pair = [Person]()
-    //            }
-    //        }
-    //
-    //
-    //        if pair.count != 0 {
-    //            pairs.append(pair)
-    //        }
-    //
-    //        return pairs
-    //    }
-    
     func makePairs() -> [[Person]] {
         
         let randomized = peopleArray.shuffled()
@@ -80,7 +54,6 @@ class PersonController {
             multiplePairs.append(singlePair)
         }
         return multiplePairs
-        
     }
     
     func saveToPersistentStore() {
@@ -91,5 +64,4 @@ class PersonController {
             print("Error! I ran into a problem at the persistent store... Sorry, couldn't save! \(error.localizedDescription)")
         }
     }
-    
 }
